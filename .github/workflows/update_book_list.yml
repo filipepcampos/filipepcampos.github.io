@@ -1,0 +1,38 @@
+name: update-book-list
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "5 0 */1 * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - name: Install requirements
+        run: |
+          cd books
+          npm install
+      - name: Get book list
+        env:
+          GOODREADS_USER_ID: ${{ secrets.GOODREADS_USER_ID }}
+        run: node books/index.js > book_list.txt
+      - name: Update index.html
+        run: |
+          cat index.html | sed 's/<\!--currently_reading_placeholder-->/&/;s//\ncat book_list.txt/e' > index_new.html
+          mv index_new.html index.html
+          rm book_list.txt
+      - name: Commit update
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git checkout -b deploy
+          git add -A
+          git commit -m "update index.html with book list"
+          git push --set-upstream origin deploy --force
