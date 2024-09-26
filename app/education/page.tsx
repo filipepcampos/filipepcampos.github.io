@@ -47,6 +47,50 @@ export default function Education() {
     },
     { uc: "Computer Vision", grade: 19, ects: "A", project: "TODO " },
   ];
+  const secondYear = [
+    {
+      uc: "Intelligent Robotics",
+      grade: 19,
+      ects: "A",
+      project: "N/A",
+    },
+    {
+      uc: "Data Analysis and Integration",
+      grade: 19,
+      ects: "B",
+      project: "N/A",
+    },
+    {
+      uc: "Modelling and Simulation",
+      grade: 20,
+      ects: "A",
+      project: "N/A",
+    },
+    {
+      uc: "Lifelong Employability",
+      grade: 20,
+      ects: "A",
+      project: "N/A",
+    },
+    {
+      uc: "Dissertation Planning",
+      grade: 20,
+      ects: "A",
+      project: "N/A",
+    },
+    {
+      uc: "Seminars",
+      grade: 18,
+      ects: "B",
+      project: "N/A",
+    },
+    {
+      uc: "Dissertation",
+      grade: 19,
+      ects: "B",
+      project: "N/A",
+    }
+  ]
 
   const bscFirstYear = [
     { uc: "Algebra", grade: 18, ects: "B", project: "N/A " },
@@ -211,6 +255,12 @@ export default function Education() {
               1st Year
             </h3>
             <GradeTable data={firstYear} />
+          </div>
+          <div className="mb-8">
+            <h3 className="p-5 text-lg font-semibold text-gray-900 dark:text-white">
+              2nd Year
+            </h3>
+            <GradeTable data={secondYear} />
           </div>
         </div>
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
