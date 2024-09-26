@@ -11,7 +11,7 @@ export default function Home() {
             Welcome!
           </h1>
           <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-            I'm a Filipe Campos, a recent graduate with a MSc Degree in
+            I&apos;m a Filipe Campos, a recent graduate with a MSc Degree in
             Informatics and Computing Engineering from FEUP.
           </p>
         </div>

@@ -1,7 +1,4 @@
-import EducationTimeline from "@/components/EducationTimeline";
-import ExperienceTimeline from "@/components/ExperienceTimeline";
 import GradeTable from "@/components/GradeTable";
-import Image from "next/image";
 
 export default function Education() {
   const firstYear = [
