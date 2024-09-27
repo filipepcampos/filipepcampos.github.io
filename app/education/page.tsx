@@ -89,8 +89,8 @@ export default function Education() {
       grade: 19,
       ects: "B",
       project: "N/A",
-    }
-  ]
+    },
+  ];
 
   const bscFirstYear = [
     { uc: "Algebra", grade: 18, ects: "B", project: "N/A " },
@@ -138,7 +138,7 @@ export default function Education() {
       ects: "A",
       project: "[StreamZ](https://github.com/filipepcampos/streamz)",
     },
-    { uc: "Physics II", grade: 19, ects: "A", project: "" },
+    { uc: "Physics II", grade: 19, ects: "A", project: "N/A" },
     { uc: "Computing Theory", grade: 19, ects: "A", project: "TODO " },
     {
       uc: "Operating Systems",
@@ -243,52 +243,56 @@ export default function Education() {
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="grid grid-cols-1 gap-16 max-w-screen-xl min-y-screen-xl px-8 py-8 mx-auto">
-        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-          <div className="p-5 text-2xl font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-            MSc in Informatics and Computing Engineering
-            <p className="mt-1 text-lg font-normal text-gray-500 dark:text-gray-400">
-              Below is an overview of the work done during my studies.
-            </p>
+        <section id="msc">
+          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <div className="p-5 text-2xl font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+              MSc in Informatics and Computing Engineering
+              <p className="mt-1 text-lg font-normal text-gray-500 dark:text-gray-400">
+                Below is an overview of the work done during my studies.
+              </p>
+            </div>
+            <div className="mb-8">
+              <h3 className="p-5 text-lg font-semibold text-gray-900 dark:text-white">
+                1st Year
+              </h3>
+              <GradeTable data={firstYear} />
+            </div>
+            <div className="mb-8">
+              <h3 className="p-5 text-lg font-semibold text-gray-900 dark:text-white">
+                2nd Year
+              </h3>
+              <GradeTable data={secondYear} />
+            </div>
           </div>
-          <div className="mb-8">
-            <h3 className="p-5 text-lg font-semibold text-gray-900 dark:text-white">
-              1st Year
-            </h3>
-            <GradeTable data={firstYear} />
+        </section>
+        <section id="bsc">
+          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <div className="p-5 text-2xl font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+              <h2>BSc in Informatics and Computing Engineering</h2>
+              <p className="mt-1 text-lg font-normal text-gray-500 dark:text-gray-400">
+                Below is an overview of the work done during my studies.
+              </p>
+            </div>
+            <div className="mb-8">
+              <h3 className="p-5 text-lg font-semibold text-gray-900 dark:text-white">
+                1st Year
+              </h3>
+              <GradeTable data={bscFirstYear} />
+            </div>
+            <div className="mb-8">
+              <h3 className="p-5 text-lg font-semibold text-gray-900 dark:text-white">
+                2nd Year
+              </h3>
+              <GradeTable data={bscSecondYear} />
+            </div>
+            <div>
+              <h3 className="p-5 text-lg font-semibold text-gray-900 dark:text-white">
+                3rd Year
+              </h3>
+              <GradeTable data={bscThirdYear} />
+            </div>
           </div>
-          <div className="mb-8">
-            <h3 className="p-5 text-lg font-semibold text-gray-900 dark:text-white">
-              2nd Year
-            </h3>
-            <GradeTable data={secondYear} />
-          </div>
-        </div>
-        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-          <div className="p-5 text-2xl font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-            <h2>BSc in Informatics and Computing Engineering</h2>
-            <p className="mt-1 text-lg font-normal text-gray-500 dark:text-gray-400">
-              Below is an overview of the work done during my studies.
-            </p>
-          </div>
-          <div className="mb-8">
-            <h3 className="p-5 text-lg font-semibold text-gray-900 dark:text-white">
-              1st Year
-            </h3>
-            <GradeTable data={bscFirstYear} />
-          </div>
-          <div className="mb-8">
-            <h3 className="p-5 text-lg font-semibold text-gray-900 dark:text-white">
-              2nd Year
-            </h3>
-            <GradeTable data={bscSecondYear} />
-          </div>
-          <div>
-            <h3 className="p-5 text-lg font-semibold text-gray-900 dark:text-white">
-              3rd Year
-            </h3>
-            <GradeTable data={bscThirdYear} />
-          </div>
-        </div>
+        </section>
       </div>
     </section>
   );
