@@ -80,7 +80,7 @@ export default function Home() {
                 </h5>
                 <p className="mb-3 font-normal text-base text-gray-700 dark:text-gray-400">
                   <u>F. Campos</u> (2024).
-                  Master's Thesis, University of Porto.
+                  Master&apos;s Thesis, University of Porto.
                 </p>
               </div>
             </a>
