@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <section className="bg-white dark:bg-gray-900">
-      <div className="grid grid-cols-1 md:grid-cols-2 max-w-screen-xl min-y-screen-xl px-8 py-8 mx-auto">
+      <div className="grid grid-cols-2 max-w-screen-xl min-y-screen-xl px-8 py-8 mx-auto">
         <div className="mr-auto place-self-center">
           <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
             Welcome!
@@ -16,14 +16,14 @@ export default function Home() {
         </div>
         <div>
           <Image
-            className="rounded-full border-solid border-4 border-gray-600 shadow-lg w-1/4"
+            className="rounded-full border-solid border-2 border-gray-600 shadow-lg w-1/4"
             src="/self_image.jpg"
             alt="Picture of the website&apos;s author."
             width="256"
             height="256"
           />
         </div>
-        <div className="md:col-span-2">
+        <div className="col-span-2">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
             About me
           </h2>
@@ -35,20 +35,20 @@ export default function Home() {
           </p>
 
         </div>        
-        <div className="mt-8">
+        <div className="col-span-2 md:col-span-1 mt-8">
           <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
             Education
           </h2>
           <EducationTimeline />
         </div>
-        <div className="mt-8">
+        <div className="col-span-2 md:col-span-1 md:mt-8">
           <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
             Experience
           </h2>
           <ExperienceTimeline />
         </div>
 
-        <div className="md:col-span-2">
+        <div className="col-span-2">
           <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
             Publications
           </h2>
@@ -67,6 +67,20 @@ export default function Home() {
                   <u>F. Campos</u>, L. Petrychenko, L. F. Teixeira, W. Silva
                   (2024). EXPLIMED: First Workshop on Explainable Artificial
                   Intelligence for the medical domain, ECAI 2024.
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://hdl.handle.net/10216/161023"
+              className="flex gap-4 items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-5xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+            >
+              <div className="flex flex-col justify-between p-4 leading-normal w-full">
+                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+                  Conditional Diffusion Models for Visual Anonymization of Medical Case-based Explanations
+                </h5>
+                <p className="mb-3 font-normal text-base text-gray-700 dark:text-gray-400">
+                  <u>F. Campos</u> (2024).
+                  Master's Thesis, University of Porto.
                 </p>
               </div>
             </a>
