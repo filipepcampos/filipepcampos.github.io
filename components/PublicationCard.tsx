@@ -14,7 +14,7 @@ export default function PublicationCard({
   return (
     <a
       href={link}
-      className="items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-5xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+      className="items-center border-l-2 border-gray-400 md:flex-row md:max-w-5xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
     >
       <div className="flex flex-col justify-between p-4 leading-normal w-full">
         <h4 className="mb-1 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
