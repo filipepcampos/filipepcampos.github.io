@@ -1,42 +1,88 @@
 "use client";
 
 import ScrollAnimation from "react-animate-on-scroll";
-import EducationTimeline from "@/components/EducationTimeline";
-import ExperienceTimeline from "@/components/ExperienceTimeline";
+import EducationTimeline from "@/components/sections/EducationTimeline";
+import ExperienceTimeline from "@/components/sections/ExperienceTimeline";
 import SectionHeader from "@/components/SectionHeader";
-import PublicationCard from "@/components/PublicationCard";
 import { TracingBeam } from "@/components/ui/TracingBeam";
 import { Colors } from "@/lib/colors";
+import PublicationsList from "@/components/sections/PublicationsList";
 
 export default function Home() {
   return (
     <section className="bg-gray-100 dark:bg-gray-900">
       <TracingBeam>
-        <div className="flex flex-col items-center justify-center min-h-screen max-w-screen-lg mx-auto py-2 px-4 gap-2">
+        <div className="flex flex-col items-center justify-center min-h-screen max-w-screen-lg mx-auto py-2 px-8 md:px-4 gap-2">
           {/* TITLE SECTION */}
-          <ScrollAnimation animateIn="fadeIn">
-            <div className="min-h-screen flex flex-col justify-center">
-              <p className={`${Colors.accent} text-sm md:text-md font-extrabold`}>
-                Hello, my name is
-              </p>
-              <h1 className={`${Colors.strong} mb-4 text-6xl tracking-tight leading-none md:text-8xl`}>
-                Filipe Campos
-              </h1>
-              <p className={`${Colors.subtle} max-w-4xl lg:mb-8 md:text-lg lg:text-xl`}>
-                Hi! I&apos;m a recent graduate in Informatics and Computing
-                Engineering from FEUP. I love a good challenge and I&apos;m
-                always looking for new opportunities to learn and grow.
-              </p>
+          <div className="min-h-screen flex flex-col justify-center">
+            <p
+              className={`${Colors.accent} text-teal-800 text-sm md:text-md font-extrabold`}
+            >
+              Hello, my name is
+            </p>
+            <h1
+              className={`${Colors.strong} mb-4 text-6xl tracking-tight leading-none md:text-8xl`}
+            >
+              Filipe Campos
+            </h1>
+            <p
+              className={`max-w-4xl lg:mb-8 md:text-lg lg:text-xl text-muted-foreground`}
+            >
+              Hi! I&apos;m a recent graduate in Informatics and Computing
+              Engineering from FEUP. I love a good challenge and I&apos;m always
+              looking for new opportunities to learn and grow.
+            </p>
+            <div className="animate-bounce flex justify-items-center justify-center w-full mt-16">
+              <svg
+                clip-rule="evenodd"
+                fill-rule="evenodd"
+                stroke-linejoin="round"
+                stroke-miterlimit="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-10"
+              >
+                <path
+                  d="m2.009 11.998c0-5.518 4.48-9.998 9.998-9.998s9.998 4.48 9.998 9.998c0 5.517-4.48 9.997-9.998 9.997s-9.998-4.48-9.998-9.997zm1.5 0c0 4.69 3.808 8.497 8.498 8.497s8.498-3.807 8.498-8.497-3.808-8.498-8.498-8.498-8.498 3.808-8.498 8.498zm4.716 1.528s1.505 1.501 3.259 3.254c.146.147.338.22.53.22s.384-.073.53-.22c1.754-1.752 3.258-3.254 3.258-3.254.145-.145.217-.335.217-.526 0-.192-.074-.384-.221-.53-.292-.293-.766-.295-1.057-.004l-1.977 1.977v-6.693c0-.414-.336-.75-.75-.75s-.75.336-.75.75v6.693l-1.979-1.978c-.289-.289-.761-.287-1.054.006-.147.147-.221.339-.222.53 0 .191.071.38.216.525z"
+                  fill-rule="nonzero"
+                  fill="#115e59"
+                />
+              </svg>
             </div>
-          </ScrollAnimation>
+          </div>
 
           {/* ABOUT SECTION */}
           <ScrollAnimation animateIn="fadeIn">
-            <div className="min-h-screen flex flex-col justify-center">
+            <div className="min-h-screen flex flex-col justify-center w-full">
               <SectionHeader text="01. About me" />
-              <p className="max-w-4xl text-gray-900 font-light lg:mb-8 md:text-lg dark:text-gray-400">
-                I'm Filipe, originally from Vila Nova de Gaia.
-              </p>
+              <div className="w-full text-gray-900 font-light lg:mb-8 md:text-lg dark:text-gray-400 flex flex-col justify-center justify-items-center gap-4">
+                <p className="w-full md:w-3/4">
+                  Hi, I&apos;m Filipe, originally from Vila Nova de Gaia! I&apos;m
+                  passionate about{" "}
+                  <strong className="font-bold">
+                    Software Engineering and Machine Learning
+                  </strong>
+                  , and I thrive on using technology to solve complex problems.
+                  Over the years, I&apos;ve had the opportunity to work with a broad
+                  range of tools and technologies.
+                </p>
+                <p className="w-full md:w-3/4">
+                  Additionally, I have had the opportunity to work in{" "}
+                  <strong className="font-bold">research positions</strong>{" "}
+                  where I focused on computer vision, deepening my knowledge in
+                  this exciting field. During these roles, I explored multiple
+                  machine learning solutions and developed interesting projects.
+                  These experiences helped me sharpen my analytical skills and
+                  fuel my enthusiasm for AI and its potential to transform
+                  industries.
+                </p>
+                <p className="w-full md:w-3/4">
+                  I&apos;m constantly seeking opportunities to learn and grow, eager
+                  to tackle new challenges and contribute to innovative
+                  projects. If you have anything to discuss, feel free to reach
+                  out!
+                </p>
+              </div>
             </div>
           </ScrollAnimation>
 
@@ -65,48 +111,10 @@ export default function Home() {
           <ScrollAnimation animateIn="fadeIn">
             <div className="col-span-2 min-h-screen">
               <SectionHeader text="04. Publications" />
-
-              <div className="flex gap-4 flex-col ml-4">
-                <PublicationCard
-                  title="Latent diffusion models for Privacy-preserving Medical Case-based Explanations"
-                  authors=", L. Petrychenko, L. F. Teixeira, W. Silva"
-                  year="2024"
-                  link="#"
-                  where="EXPLIMED: First Workshop on Explainable Artificial Intelligence for the medical domain, ECAI 2024"
-                />
-                <PublicationCard
-                  title="Conditional Diffusion Models for Visual Anonymization of Medical Case-based Explanations"
-                  authors=""
-                  year="2024"
-                  link="https://hdl.handle.net/10216/161023"
-                  where="Master's Thesis, University of Porto"
-                />
-                <PublicationCard
-                  title="YOLOMM - You Only Look Once for Multi-modal Multi-tasking"
-                  authors=", F. Cerqueira, R. Cruz, J. Cardoso"
-                  year="2023"
-                  link="https://link.springer.com/chapter/10.1007/978-3-031-49018-7_40"
-                  where="Iberoamerican Congress on Pattern Recognition 2023 (CIARP), Springer Nature Switzerland"
-                />
-              </div>
+              <PublicationsList />
             </div>
           </ScrollAnimation>
         </div>
-        {/* <div className="grid grid-cols-2 max-w-screen-lg min-y-screen-xl px-8 py-8 mx-auto">
-        <div>
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1">
-            01. About me
-          </h2>
-        </div>
-        <div className="col-span-2">
-          <p className="text-gray-700 dark:text-white">
-            Hi! I&apos;m Filipe Campos, a recent graduate in Informatics and Computing Engineering from the Faculty of Engineering of the University of Porto. I&apos;m passionate about Software Engineering and Machine Learning, and I&apos;m always looking for new challenges and opportunities to learn and grow.
-          </p>
-          <p className="text-gray-700 dark:text-white">
-            Do you have anything you&apos;d like to discuss? Feel free to reach out to me!
-          </p>
-
-        </div>        */}
       </TracingBeam>
     </section>
   );

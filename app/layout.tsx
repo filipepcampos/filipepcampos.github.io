@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import "animate.css/animate.compat.css"
 import localFont from "next/font/local";
 import "./globals.css";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,11 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth bg-gray-100 dark:bg-gray-900`}
       >
-        <NavBar />
+        {/* <NavBar /> */}
         {children}
-        <Footer />
+        {/* <Footer /> */}
+        <Toaster />
       </body>
     </html>
   );

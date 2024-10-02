@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="max-w-screen-xl mx-auto w-full">
       <div>
        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <div className="sm:flex sm:items-center sm:justify-between pb-5">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2024 <a className="hover:underline">Filipe Campos</a>. All Rights
             Reserved.

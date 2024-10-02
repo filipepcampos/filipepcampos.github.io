@@ -1,4 +1,4 @@
-import UniversitySemesterSection from "@/components/UniversitySemesterSection";
+import UniversitySemesterSection from "@/components/sections/UniversitySemesterSection";
 
 export default function Education() {
   const firstYear = [
