@@ -48,6 +48,7 @@ export default function PublicationCard({
         </Button> */}
         {url && (
           <Button
+            className="dark:invert"
             onClick={() => {
               window.open(url);
             }}

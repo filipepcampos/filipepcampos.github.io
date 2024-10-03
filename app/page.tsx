@@ -14,13 +14,13 @@ export default function Home() {
   const executeScroll = () => myRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
-    <section className="bg-gray-100 dark:bg-gray-900">
+    <section className="bg-gray-100 dark:bg-black">
       <TracingBeam>
         <div className="flex flex-col items-center justify-center min-h-screen max-w-screen-lg mx-auto py-2 px-8 md:px-4 gap-2">
           {/* TITLE SECTION */}
           <div className="min-h-screen flex flex-col justify-center">
             <p
-              className={`${Colors.accent} text-teal-800 text-sm md:text-md font-extrabold`}
+              className={`text-teal-800 dark:text-teal-500 text-sm md:text-md font-extrabold`}
             >
               Hello, my name is
             </p>
@@ -36,7 +36,7 @@ export default function Home() {
               Engineering from FEUP. I love a good challenge and I&apos;m always
               looking for new opportunities to learn and grow.
             </p>
-            <div className="animate-bounce flex justify-items-center justify-center w-full mt-16">
+            <div className="animate-bounce flex justify-items-center justify-center w-full mt-16 text-teal-800 dark:text-teal-500">
               <button onClick={executeScroll}>
                 <svg
                   clip-rule="evenodd"
@@ -45,12 +45,11 @@ export default function Home() {
                   stroke-miterlimit="2"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-10"
+                  className="w-10 fill-teal-800 dark:fill-teal-500"
                 >
                   <path
                     d="m2.009 11.998c0-5.518 4.48-9.998 9.998-9.998s9.998 4.48 9.998 9.998c0 5.517-4.48 9.997-9.998 9.997s-9.998-4.48-9.998-9.997zm1.5 0c0 4.69 3.808 8.497 8.498 8.497s8.498-3.807 8.498-8.497-3.808-8.498-8.498-8.498-8.498 3.808-8.498 8.498zm4.716 1.528s1.505 1.501 3.259 3.254c.146.147.338.22.53.22s.384-.073.53-.22c1.754-1.752 3.258-3.254 3.258-3.254.145-.145.217-.335.217-.526 0-.192-.074-.384-.221-.53-.292-.293-.766-.295-1.057-.004l-1.977 1.977v-6.693c0-.414-.336-.75-.75-.75s-.75.336-.75.75v6.693l-1.979-1.978c-.289-.289-.761-.287-1.054.006-.147.147-.221.339-.222.53 0 .191.071.38.216.525z"
                     fill-rule="nonzero"
-                    fill="#115e59"
                   />
                 </svg>
               </button>

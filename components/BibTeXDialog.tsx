@@ -27,7 +27,7 @@ export function BibTeXDialog({ bibtex }: { bibtex: string }) {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button variant="outline" className="dark:bg-gray-800">
+        <Button variant="outline" className="dark:bg-black">
           BibTeX
         </Button>
       </AlertDialogTrigger>
