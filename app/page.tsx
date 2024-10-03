@@ -57,14 +57,14 @@ export default function Home() {
               <SectionHeader text="01. About me" />
               <div className="w-full text-gray-900 font-light lg:mb-8 md:text-lg dark:text-gray-400 flex flex-col justify-center justify-items-center gap-4">
                 <p className="w-full md:w-3/4">
-                  Hi, I&apos;m Filipe, originally from Vila Nova de Gaia! I&apos;m
-                  passionate about{" "}
+                  Hi, I&apos;m Filipe, originally from Vila Nova de Gaia!
+                  I&apos;m passionate about{" "}
                   <strong className="font-bold">
                     Software Engineering and Machine Learning
                   </strong>
                   , and I thrive on using technology to solve complex problems.
-                  Over the years, I&apos;ve had the opportunity to work with a broad
-                  range of tools and technologies.
+                  Over the years, I&apos;ve had the opportunity to work with a
+                  broad range of tools and technologies.
                 </p>
                 <p className="w-full md:w-3/4">
                   Additionally, I have had the opportunity to work in{" "}
@@ -77,8 +77,8 @@ export default function Home() {
                   industries.
                 </p>
                 <p className="w-full md:w-3/4">
-                  I&apos;m constantly seeking opportunities to learn and grow, eager
-                  to tackle new challenges and contribute to innovative
+                  I&apos;m constantly seeking opportunities to learn and grow,
+                  eager to tackle new challenges and contribute to innovative
                   projects. If you have anything to discuss, feel free to reach
                   out!
                 </p>

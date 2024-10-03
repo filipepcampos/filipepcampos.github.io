@@ -8,11 +8,25 @@ export default function UrlButton({
 }: {
   href: string;
   children: React.ReactNode;
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+  variant?:
+    | "default"
+    | "destructive"
+    | "outline"
+    | "secondary"
+    | "ghost"
+    | "link";
   // eslint-disable-next-line
   props?: any;
 }) {
   return (
-    <Button variant={variant} onClick={() => {window.open(href)}} {...props}>{children}</Button>
+    <Button
+      variant={variant}
+      onClick={() => {
+        window.open(href);
+      }}
+      {...props}
+    >
+      {children}
+    </Button>
   );
 }

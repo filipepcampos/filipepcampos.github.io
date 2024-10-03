@@ -37,8 +37,22 @@ export default function PublicationCard({
       </CardHeader>
       <CardFooter className="flex gap-4">
         {bibtex && <BibTeXDialog bibtex={bibtex} />}
-        <Button variant="outline" className="dark:bg-gray-800" onClick={() => {window.open(code_url)}}>Code</Button>
-        <Button onClick={() => {window.open(url)}}>Read</Button>
+        <Button
+          variant="outline"
+          className="dark:bg-gray-800"
+          onClick={() => {
+            window.open(code_url);
+          }}
+        >
+          Code
+        </Button>
+        <Button
+          onClick={() => {
+            window.open(url);
+          }}
+        >
+          Read
+        </Button>
       </CardFooter>
     </Card>
   );

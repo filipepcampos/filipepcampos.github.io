@@ -44,10 +44,7 @@ export default function GradeTable({
               {projects &&
                 projects.map(({ name, url, weburl }, index) => (
                   <div key={index}>
-                    <a
-                      href={url}
-                      className="text-blue-500 hover:text-blue-800"
-                    >
+                    <a href={url} className="text-blue-500 hover:text-blue-800">
                       {index > 0 ? ` ` : ""} {name}
                     </a>
                     {weburl && (
