@@ -10,9 +10,8 @@ import PublicationsList from "@/components/sections/PublicationsList";
 import { useRef } from "react";
 
 export default function Home() {
-  const myRef = useRef(null);
-  const executeScroll = () =>
-    myRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  const myRef = useRef<null | HTMLDivElement>(null);
+  const executeScroll = () => myRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
     <section className="bg-gray-100 dark:bg-gray-900">

@@ -15,7 +15,7 @@ export default function PublicationCard({
   url,
   where,
   bibtex,
-  code_url,
+  // code_url,
 }: {
   title: string;
   authors: string;
@@ -23,7 +23,7 @@ export default function PublicationCard({
   url?: string;
   where: string;
   bibtex?: string;
-  code_url?: string;
+  // code_url?: string;
 }) {
   return (
     <Card className="w-[300px] md:w-full">
