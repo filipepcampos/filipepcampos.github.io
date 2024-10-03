@@ -12,7 +12,7 @@ export default function PublicationCard({
   title,
   authors,
   year,
-  link: url,
+  url,
   where,
   bibtex,
   code_url,
@@ -20,7 +20,7 @@ export default function PublicationCard({
   title: string;
   authors: string;
   year: string;
-  link: string;
+  url?: string;
   where: string;
   bibtex?: string;
   code_url?: string;
@@ -37,7 +37,7 @@ export default function PublicationCard({
       </CardHeader>
       <CardFooter className="flex gap-4">
         {bibtex && <BibTeXDialog bibtex={bibtex} />}
-        <Button
+        {/* <Button
           variant="outline"
           className="dark:bg-gray-800"
           onClick={() => {
@@ -45,14 +45,16 @@ export default function PublicationCard({
           }}
         >
           Code
-        </Button>
-        <Button
-          onClick={() => {
-            window.open(url);
-          }}
-        >
-          Read
-        </Button>
+        </Button> */}
+        {url && (
+          <Button
+            onClick={() => {
+              window.open(url);
+            }}
+          >
+            Read
+          </Button>
+        )}
       </CardFooter>
     </Card>
   );
